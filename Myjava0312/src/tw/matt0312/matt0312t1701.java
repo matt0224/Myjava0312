@@ -39,17 +39,20 @@ public class matt0312t1701 {
 			   String result = checkAB(answer,guess);  //開始寫方法
 			   JOptionPane.showMessageDialog(null,result);
 			   if(result.equals("3A0B")){      
-				   isWinner = true;
-				   break;
+				  
 			   }
 		  //2.3 winner  =>break 贏脫離
-			   
+			   isWinner = true;
+			   break;
 		  //2.4 repeat 10times = >loser
-	}
+	    }
 		  //3. show   //show出答案
+		   if(isWinner){
+			   JOptionPane.showMessageDialog(null, "答對");
+		   }else{
+			   JOptionPane.showMessageDialog(null, "Losser, Answer is " + answer);
+		   }
 		   
-		   System.out.println("恭喜答對");
-	}
 	
 	 // metjod:cheakAB(answer,guess)=>?a?b   自己製作辦法     // 這邊要回傳到第33行
 		  static String checkAB(String a, String g){
