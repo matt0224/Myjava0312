@@ -49,7 +49,7 @@ public class matt0312t1701 {
 		  //3. show   //show出答案
 		   if(isWinner){
 			   JOptionPane.showMessageDialog(null, "答對");
-		   }else{
+		   }else
 			   JOptionPane.showMessageDialog(null, "Losser, Answer is " + answer);
 		   }
 		   
