@@ -6,7 +6,7 @@ public class Bike extends Object{     //寫在類別裡面  //父類別的觀念
 	
       double speed;     //速度不是說改就改所以要加封裝private //第2階段把private拿掉
       int a; // a=0 代表顏色 0代表沒顏色  a沒有 private 
-      static int b;  //跟上面插static
+      static int b;  //跟上面插static   //static會累加 而方法使用一次就結束
      
       Bike(){ 					//3/18建構式宣告無傳回值與類別Bike大小寫一樣 //建構完bike的第9行後,再做一台腳踏車測試是否有兩台
     	                        //這邊表沒有使參數 使用原本的就好
