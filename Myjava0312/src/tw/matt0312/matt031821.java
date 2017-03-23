@@ -11,11 +11,12 @@ public class matt031821 {
 		TWid id3= new TWid(false);
 		TWid id4= new TWid(true,12);
 		System.out.println(id1.getId());
-		if(id1.isfemale()){
-			System.out.println("女生");
-		}else{
-			System.out.println("男生");
-		}
+//		System.out.println(id1.getId());
+//		if(id1.isfemale()){
+//			System.out.println("女生");
+//		}else{
+//			System.out.println("男生");
+//		}
 	}
 
 }

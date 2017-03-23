@@ -7,6 +7,7 @@ public class matt20 {
 		//matt b1 = new matt();
 		// matt b2 = new matt();
 		// matt b3 = new matt();
+		//System.out.println(matt.b);
 	}
 
 }

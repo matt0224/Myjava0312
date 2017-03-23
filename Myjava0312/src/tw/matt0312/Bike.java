@@ -11,6 +11,7 @@ public class Bike extends Object{     //寫在類別裡面  //父類別的觀念
       Bike(){ 					//3/18建構式宣告無傳回值與類別Bike大小寫一樣 //建構完bike的第9行後,再做一台腳踏車測試是否有兩台
     	                        //這邊表沒有使參數 使用原本的就好
     	  this(0);            //代表就是這個物件傳整數的那個會跳到下面 Bike(int s)這個
+    	                        //建構式長這樣
       //  speed = 100;       測試用  
     	//  speed = s;                             // 
     	//  System.out.println("Bike:bike()v1");   // 用this取代這兩行
@@ -18,7 +19,8 @@ public class Bike extends Object{     //寫在類別裡面  //父類別的觀念
       }
       Bike(int s){                                      //宣告名稱只能跟類別依樣,從括號避免混淆
     	  this(s*1f);   //這邊又可以呼叫Bike(float s)
-    	 // speed = s; //客戶指定1.2所以給他1.2   	  
+    	 //
+    	  speed = s; //客戶指定1.2所以給他1.2   	  
     	 // System.out.println("Bike:bike()v3");     //這邊使用不同的方法來使用 bike  int找不到 
     	                                                                // bike如果找不到會找double
     	               /////Bike(int s)上面範呼叫float

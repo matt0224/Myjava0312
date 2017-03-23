@@ -6,8 +6,12 @@ public class matt27 {
 
 	public static void main(String[] args) {
 		matt271 b1 = new matt272();  //new 271出現紅字 因為抽象用272定義
+		                             //271是抽象類別怎麼會出現272的物件實體因為272已經實作出來了
+		                             //跑matt271 b1 = new matt272()表示272繼承271無傳參數建構式
+		b1.m2();  //void m2(){System.out.println("matt272:m2()");}
 		matt271 b2 = new matt273();
-		b1.m2();
+		b1.m2();  // void m2(){System.out.println("matt273:m2()");}
+		   
         b2.m2();
         //這邊抽象方法未宣告
 	}
@@ -16,6 +20,7 @@ public class matt27 {
 abstract class matt271 {    //有抽象類別 這邊也要加 abstract 打算不直接坐車物件實體(期待子類別的出現)
 	 matt271(){System.out.println("matt271)");} //可寫可不寫 建構式
 	 void m1(){System.out.println("matt271:m1()");}
+	       //上面這個叫做宣告
 	 abstract void m2(); // 有這招沒實作 前面要加 abstract   這邊式宣告
 }
 class matt272 extends matt271 {

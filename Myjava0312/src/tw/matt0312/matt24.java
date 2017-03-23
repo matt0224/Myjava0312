@@ -21,7 +21,7 @@ public class matt24 extends JFrame{     //載入先才能執行Staic
 		 
 		 
 		 open = new  JButton("open");
-		 save = new  JButton("save");
+		 save = new  JButton("save");   //宣告
 		 exit = new  JButton("exit");
 		 myPainter = new MyPainter();
 		 

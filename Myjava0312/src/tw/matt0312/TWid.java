@@ -5,16 +5,16 @@ public class TWid {   //這是一個類別
 	static String letters="ABCDEFGHJKLMNPQRSTUVXYWZIO"; //從20行拉到第四行家static不屬於物件
 	
 	// TWid(String myid){
-	//	id=myid;
+	//	id=myid;     
 	// }  
 	 
 	   //""第一道敘述句不是spuer 就是this""
-	 
+	                                   //建構式發揚光大
 	 TWid(){                                 //參數列 型別 不會造成混淆   //表示隨機
 		 //super     第一道敘述句只能用一次因為已經放在第22行了 不要再整理成
 		 //boolean = X   不要再整理成 
 		 //this(X)       不要再整理成 用下面的            //第一道敘述句 不是this 不是就是super這邊會往下叫
-		 this((int)(Math.random()*2)==0);   //18行f0和19行f1隨機 其他跟18行一樣
+		 this((int)(Math.random()*2)==0);   //男生不是0就是118行f0和19行f1隨機 其他跟18行一樣
 	 }
 	 TWid(boolean isFemale){                //這四招都是要滿足check ok
 		 this(isFemale, ((int)(Math.random()*26))); //指定男生女生其他亂數
@@ -23,18 +23,23 @@ public class TWid {   //這是一個類別
 			 this((int)((Math.random()*2))==0,area);   //進去之後傳給area
 	 } 								 //第一道敘述句 不是this 不是就是super這邊會往下叫
 	 TWid(boolean isFemale,int area){  
-		  //沒寫就是super():
-		   char f0=letters.charAt(area); //物件可以呼叫static 因為已經載入了 但是static沒有物件實體所以無法呼叫
+		  //沒寫就是super():  //super到父類別 如果是沒有的話 上面跑玩到obj這樣才會在記憶體才能呼叫
+		 
+		   char f0=letters.charAt(area); //這邊是物件 物件可以呼叫static 因為已經載入了 但是static沒有物件實體所以無法呼叫
 		   char f1=isFemale?'2':'1';
-		   String temp="" +f0+f1;
+		   StringBuffer sb =new  StringBuffer("" +f0+f1);//String temp="" +f0+f1;  //斥串加其他型別等於字串
 		   for(int i=0;i<7;i++){
-			   temp+=(int)(Math.random()*10);
-					  
+			   sb.append((int)(Math.random()*10));
+			//以上行數表示轉型再執行其他行數,有1,2就亂數 有2,1就亂數		  
 		   }
-		   for(int i=0;i<10;i++){
-			   if(ischeckOK(temp+i));    //隨便數字加最後一個數字 10個裡面就會出現正確
+		   for(int i=0;i<10;i++){        //這邊插座後一碼
+			   if(ischeckOK(sb.toString()+i)){id=sb.append(i).toString()+i;break;}
+			 //  if(ischeckOK(temp+i)){; //前面9個加檢查碼隨便數字加最後一個數字 10個裡面拿去
+			 //  id=temp+i;     //如果檢查OK後離開
+			 //  break;
+			   }
 		   }
-	 }
+	 
 	 TWid(String id){								//這邊屬於建構式,人家傳遞近來叫myid
 		 this.id=id;							          //如果人家傳遞進來也較id 用this區隔 寶寶的id
 	 }  
@@ -50,11 +55,12 @@ public class TWid {   //這是一個類別
 	  }//
 	  
 	  static boolean ischeckOK(String id){  //同一種特性 不需要物件給我一個字串阿!! 先隨便做一個舉證不罵我
-		   if(!id.matches("^[A-Z][12]{8}$")) return false; //正規表示 //需要吻合此條件在往下判斷 無判斷會出現錯誤傳回False
+		   if(!id.matches("^[A-Z][12][0-9]{8}$")) return false; //正規表示 //需要吻合此條件在往下判斷 無判斷會出現錯誤傳回False
 		   //依照身分證網站數字順序 基本數值是加10 A=11 
 		  char f0= id.charAt(0);
 		  int n12 = letters.indexOf(f0)+10;  //'Y'=>21+10=31
 		  int n1=n12 / 10;
+		  
 		  int n2 = n12 % 10;
 		  int n3 =Integer.parseInt(id.substring(1,2));   //抽出來的字串(12345)轉成(int)
 		  int n4 =Integer.parseInt(id.substring(2,3)); 
