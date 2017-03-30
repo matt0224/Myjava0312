@@ -14,6 +14,7 @@ public class matt26 {
 		// matt262 b2 = new matt261();   //要法拉利但給車
 		// System.out.println(b2.b); //這邊會報措matt261 b2 沒有 b
 		// matt262 b3 = new matt262();
+		//System.out.println(b2.a);
 		 matt261 b4 = new matt263();
 		 
 		 myf1(b4);  //這邊呼叫b3的262

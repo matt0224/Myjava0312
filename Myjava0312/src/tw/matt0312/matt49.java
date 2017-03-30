@@ -16,10 +16,10 @@ public class matt49 {
 		  try{
 			FileInputStream fin= new FileInputStream(file);
 			  byte[] buf=new byte[3] ;	 //字串也是byte構成 //使用utf8改成3才會顯示中文字 //微軟還是2個BYTE
-			  int len ;  //這邊怕遇到不是byte的
-			  while((len=fin.read(buf))!=-1){     
-				  System.out.print(new String(buf,0,len));
-			  }
+			  int len ;  //這邊怕遇到不是byte的                                      //源頭內部dir1也要改
+			  while((len=fin.read(buf))!=-1){     //這邊的 buf可以直接讀進去
+				  System.out.print(new String(buf,0,len)); //這邊的使用new String從0到輸入的字上面從2改成3
+			  }												//也是沒有解決只能取2或3的字原
 			
 //			    System.out.println((char)fin.read());
 //			    System.out.println((char)fin.read());

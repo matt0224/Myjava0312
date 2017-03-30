@@ -10,10 +10,10 @@ public class matt48 {
 	public static void main(String[] args) {
 		File file =new File("./dir1/file1.txt ");  //一開始就出現紅字要找某建構是建立 找到是字串 //dir
 		                     //./dir1/file1.txt                 //這邊就可以開始存取路進了
-		                                       //用逗點表示顯示的目錄
-		                                      //這邊表示C: 跳脫後面不存在
-		                                          //兩\\第一表示跳脫TAB看後面表示真的想表示\
-		                                          //可以用C:/test/brad.txt ,java用法自動幫你轉成目錄符號
+		                                       //用逗點表示現在的所在目錄
+		//C:\test\brad.txt 這邊\代表跳脫(tab)根本沒這總目錄所以顯示不存在                             //這邊表示C: 跳脫後面不存在
+		                                          //兩\\第一表示跳脫TAB看後面表示""真的想表示\""
+		                                  //可以用C:/test/brad.txt ,java用法自動幫你轉成目錄符號
 		        //逗號表示目前所在路進            
 		  try{
 			FileInputStream fin= new FileInputStream(file);
@@ -37,7 +37,7 @@ public class matt48 {
 		  }
 		
 	        if(file.exists()){     //他的是RUNTIME執行的時候例外
-	        	System.out.println("ok:"+file.getAbsolutePath()); //顯示絕對路進
+	        	System.out.println("ok:"+file.getAbsolutePath()); //顯示絕對路進 用.後執行這個顯示人現在在這裡
 	        }else{
 	        	System.out.println("XX");
 	        }

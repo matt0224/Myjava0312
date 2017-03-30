@@ -14,7 +14,7 @@ public class matt51 {
 				FileReader reader = //
 						  new FileReader(file);
 				int temp;
-				while( (temp=reader.read())!=-1){  //他認的就是字元 文字資料
+				while( (temp=reader.read())!=-1){  //這邊是一個一個讀近來他認的就是字元 文字資料
 					System.out.print((char)temp);
 				}
 				reader.close(); //有開有關
