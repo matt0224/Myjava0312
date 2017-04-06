@@ -15,7 +15,7 @@
 //		 //super();       //super this存在的原因因為要叫出歷史的副類別 建構式釋初始化的概念
 //		
 //		 super("視窗程式");            //呼叫另一個建構式
-//		 //System.out.println("matt24()");
+//		 //System.out.println("matt24()");  //類別是空的呼叫爸爸的無傳
 //		// setLayout(new FlowLayout(FlowLayout.LEFT));  //請一個室內設計師整理版面 
 //		 setLayout(new BorderLayout());  
 //		 
