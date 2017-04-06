@@ -1,6 +1,6 @@
 package tw.matt0312;
 /*
- * 計算面積 三角形 用interface
+ * 計算面積 三角形 用interface   static我要車你給我內外都是法拉利 才能執行Trishape裡面的方法
  */
 public class matt30 {
 
