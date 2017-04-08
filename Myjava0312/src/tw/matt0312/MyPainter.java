@@ -27,9 +27,10 @@
 //	void setY0(int y0){this.y0=y0;};    //這邊是有要用的屬性
 //	void setX1(int x1){this.x1=x1;};
 //	void setY1(int y1){this.y1=y1;};
-//	int get(int x1){this.x1=x1;};       //這邊是裝碼表 所以要有回傳值
-//	int get(int y1){this.y1=y1;};
-//	
+////	int get(int x1){this.x0=x0;};       //這邊是裝碼表 所以要有回傳值
+////	int get(int y1){this.y0=y0;};
+////	int get(){this.x0=x0;};       //這邊是裝碼表 所以要有回傳值
+////	int get(){this.y0=y0;};
 //	@Override
 //		protected void paintComponent(Graphics g) { //拿到g物件   //paintcome直接出現Component
 //			// TODO Auto-generated method stub
@@ -111,8 +112,9 @@
 //	public void mouseReleased(MouseEvent e) {  //我專心聽到事件把事件的值回報給裡面
 //		super.mouseReleased(e);
 //		int x1=e.getX(), y1=e.getY();
-//		painter.changeLine(x1, y1);
+//		painter.changeLine(x1, y1); //這行表示專心聽到並傳值回changeLine
 //		//painter.setX1(x1);
 //		//painter.setY1(y1);
+//		painter.repaint();
 //	}
 //}
