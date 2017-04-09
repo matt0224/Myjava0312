@@ -10,8 +10,10 @@ public class Student implements Serializable {  //宣告成這邊可以序列化
   private transient int math; //帶有transient是不要序列化
   private int eng;
   private String name;
+  private Car car;
   public Student(String name,int ch,int math,int eng){
 	  this.name=name;this.ch=ch;this.math=math;this.eng=eng;
+	  car=new Car();
   }
   String getname(){
 	  return name;
@@ -19,6 +21,6 @@ public class Student implements Serializable {  //宣告成這邊可以序列化
   double sum(){ return ch+math+eng;};
   double avg(){return sum()/3;}
 }
-class car implements Serializable { //差別在資料會不會外洩
+class Car implements Serializable { //差別在資料會不會外洩
 	
 }

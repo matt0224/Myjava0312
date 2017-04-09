@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-
+//這邊是坐讀資料
 public class matt50 {
 
 	public static void main(String[] args) {
