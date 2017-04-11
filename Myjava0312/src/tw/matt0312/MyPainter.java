@@ -27,10 +27,10 @@ public class MyPainter extends JPanel implements MouseListener {//component抽�
 	void setY0(int y0){this.y0=y0;};    //這邊是有要用的屬性
 	void setX1(int x1){this.x1=x1;};
 	void setY1(int y1){this.y1=y1;};
-//	int get(int x1){this.x0=x0;};       //這邊是裝碼表 所以要有回傳值
+//	int get(int x1){this.x0=x0;};      
 //	int get(int y1){this.y0=y0;};
-//	int get(){this.x0=x0;};       //這邊是裝碼表 所以要有回傳值
-//	int get(){this.y0=y0;};
+//	int get(){this.x0=x0;};//這邊是裝碼表 所以要有回傳值
+//	int get(){this.y0=y0;};//這邊是裝碼表 所以要有回傳值
 	@Override
 		protected void paintComponent(Graphics g) { //拿到g物件   //paintcome直接出現Component
 			// TODO Auto-generated method stub
@@ -48,12 +48,16 @@ public class MyPainter extends JPanel implements MouseListener {//component抽�
 			System.out.println("paint");
 		}
 	void changeLine(int x1,int y1){
+		
+		//有修改的w=2*r,h=w   int x ,int y已經宣告在上面不用從副宣告
 		this.x1=x1 ; this.y1=y1;
 		int r= Math.abs(x0-this.x1); 
 		w=2*r;
 		h=w ;
 		x=x0-r ;
-		y=y0-r;
+		y=y0-r;//到這行原本從線到劃圓
+		repaint();
+		
 	}
 	
 
@@ -85,10 +89,10 @@ public class MyPainter extends JPanel implements MouseListener {//component抽�
 	@Override
 	public void mouseReleased(MouseEvent e) {
 		x1=e.getX();y1=e.getY();
-		int r= Math.abs(x0-x1); 
+		int r= Math.abs(x0-x1); //這邊是算圓的寬
 		w=2*r;
 		h=w ;
-		x=x0-r ;
+		x=x0-r ;  
 		y=y0-r;
 		// System.out.println("Released");
 		 repaint();  //這邊在畫圖有生命週期方法都會被觸發 這邊應該要寫在周期性的東西 劃的時候就叫你來看
@@ -111,7 +115,11 @@ class MyMouseAdapter extends MouseAdapter{ //這個類別設計出來只能跟 M
 	@Override
 	public void mouseReleased(MouseEvent e) {  //我專心聽到事件把事件的值回報給裡面
 		super.mouseReleased(e);
-		int x1=e.getX(), y1=e.getY();
+//		painter.setX1(e.getX());
+//		painter.setY1(e.getY());   
+//		//x0=e.getX();y0=e.getY(); 上面兩行取代這行 但後來改邏輯
+		
+		int x1=e.getX(), y1=e.getY(); //最後邏輯改成這樣
 		painter.changeLine(x1, y1); //這行表示專心聽到並傳值回changeLine
 		//painter.setX1(x1);
 		//painter.setY1(y1);

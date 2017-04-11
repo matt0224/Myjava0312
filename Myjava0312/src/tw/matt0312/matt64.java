@@ -14,7 +14,10 @@ public class matt64 {
 			DatagramPacket packet = new DatagramPacket(buf, buf.length);
 			socker.receive(packet); //沒經過三方交握 UCP
 			socker.close();
-			System.out.println("12345");
+			int len = packet.getLength();
+			byte[] rdata = packet.getData();
+			String urip = packet.getAddress().getHostAddress();
+			System.out.println(urip + " => " + new String(rdata, 0, len));
 		} catch (Exception e) {
 			System.out.println(e.toString());
 		}
