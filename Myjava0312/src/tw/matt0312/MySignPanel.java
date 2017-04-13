@@ -15,13 +15,15 @@ import javax.swing.JPanel;
 
 public class MySignPanel extends JPanel {                     //line
 	private LinkedList <LinkedList<HashMap<String, Integer>>> lines, recyle;  //原本一條線 包起來代表很多條線
-	                                                                 //作一個回收桶
+	                 //以上是資料結構                                                //作一個回收桶
+	//<LinkedList<HashMap<String, Integer>> lines;這樣叫做一條線
+	                        //k,v
     public MySignPanel(){
     	
     	setBackground(Color.YELLOW);
     	MyMouseListener listener= new MyMouseListener();
-    	addMouseListener(listener); 
-    	addMouseMotionListener(listener);
+    	addMouseListener(listener);   //需要用到這兩個方法,但需要時作
+    	addMouseMotionListener(listener);//需要用到這兩個方法,但需要時作
     	
     	//line=new LinkedList<>(); //先new 出來 看是否為一條線
     	lines=new LinkedList<>(); //先new 出來 看是否為一條線 //圖案在這邊建構
@@ -43,6 +45,8 @@ public class MySignPanel extends JPanel {                     //line
         		int x0= p0.get("x"), y0=p0.get("y"); //取出來在劃
         		int x1= p1.get("x"), y1=p1.get("y");
         		g2d.drawLine(x0, y0, x1, y1);
+        		//g2d.drawLine(line.get(i-1).get("x"), line.get(i-1).get("y"), line.get(i).get("x"),
+        				//line.get(i).get("y")); 這一行取代上一行
     	}
     	
     
