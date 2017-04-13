@@ -13,7 +13,7 @@ public class matt60 {
 		public static void main(String[] args) {
 			try {
 				ObjectInputStream oin = new ObjectInputStream(new FileInputStream("./dir2/matt.object"));
-				Object obj1 = oin.readObject();
+				Object obj1 = oin.readObject();										//這邊解序列化所以物件存在
 				Object obj2 = oin.readObject();  //多個物件的解序列
 				oin.close();
 				Student s1 = (Student)obj1;  //要強制轉型才能用物件原本裡面的方法

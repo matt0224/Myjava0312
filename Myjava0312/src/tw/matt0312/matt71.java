@@ -18,9 +18,9 @@ public class matt71 {
 		int i1=12;
 		Object obj1=i1;//i1這邊已經是
 		Integer i2 = new Integer(34);
-		set.add(i2);
+		set.add(i2);//set.add(i1)這裡面一定要放物件
 	    set.add(i1); //i1=>auto-boxing=>new integer(i2) 這邊自動裝箱了 變成integer(i2)的物件了
-	    System.out.println(set); //因為爸爸有改過 直接印出tostring
+	    System.out.println(set); //到這邊的時候是tostring因為爸爸有改過 直接印出tostring
 		System.out.println("====");
 		Iterator it=set.iterator(); //因為介面 他有實作 拿到一個蝶代的物件 任何一個set都有碟代
 		while(it.hasNext()){  //請問有沒有下一個 ture代表有 拿出

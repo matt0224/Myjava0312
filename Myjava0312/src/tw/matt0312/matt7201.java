@@ -8,7 +8,7 @@ public class matt7201 {
 		TreeSet<String> set =new TreeSet<>();   //換成泛行<>裡面都是
         set.add("1");
         set.add("2");
-        set.add("12"); //裡面是半型
+        set.add("12"); //這邊泛成字串 的自然排序法
        for(String obj:set){
     	   System.out.println(obj); //換成泛行<>裡面都是字串
        }

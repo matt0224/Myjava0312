@@ -4,8 +4,8 @@ import java.util.HashMap;
 import java.util.Set;
 
 public class matt74 {
-
-	public static void main(String[] args) {
+											//list的key永遠是整數 但map可以是物件
+	public static void main(String[] args) { //MAP是映射 一對一的關係  
 		HashMap<String, Object>  map= new HashMap<>(); //前面不泛資料會亂丟
 		map.put("name","matt");  //有泛行會提醒你 用PUT丟
 		map.put("weight", 80.5);  //前面add是多一個元素 put是設定

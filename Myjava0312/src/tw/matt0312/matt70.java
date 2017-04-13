@@ -3,8 +3,7 @@ package tw.matt0312;
 public class matt70 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	
 	}
 
 }

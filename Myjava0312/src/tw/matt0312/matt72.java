@@ -10,6 +10,7 @@ public class matt72 {
 		TreeSet<Integer> set =new TreeSet<>();   //換成泛行<>裡面放整數 不是整數就不能放
          set.add(12);
          set.add(56);
+        // set.add("78"); //一開始編一時期就壞了 字串不行     
          byte a=13;
          //set.add(a); //byte=> int =>integer 這邊不能轉兩次
          set.add((int)a); //可以直接先轉型再放進去add就不會抱錯了

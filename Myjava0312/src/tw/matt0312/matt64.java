@@ -13,7 +13,8 @@ public class matt64 {
 			DatagramSocket socker = new DatagramSocket(1111);
 			DatagramPacket packet = new DatagramPacket(buf, buf.length);
 			socker.receive(packet); //沒經過三方交握 UCP
-			socker.close();
+			socker.close();  //這邊收
+			
 			int len = packet.getLength();
 			byte[] rdata = packet.getData();
 			String urip = packet.getAddress().getHostAddress();

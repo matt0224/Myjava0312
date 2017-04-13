@@ -7,7 +7,8 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 
 public class matt65 {
-
+//tcp 安全性
+	//java net 
 	public static void main(String[] args) {
 	  
 		try {

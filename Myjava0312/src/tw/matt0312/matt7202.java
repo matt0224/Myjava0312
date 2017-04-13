@@ -8,11 +8,11 @@ public class matt7202 {
 	public static void main(String[] args) {
 		HashSet set =new HashSet();   //換成泛行<>裡面都是
         set.add(1);
-        HashSet set2 =new HashSet();   //換成泛行<>裡面都是
+        HashSet set2 =new HashSet();   //換成泛行<>裡面都是 
         set.add(2);
         set.add(3);
         set.add(4); 
-        set.addAll(set2);   
+        set.addAll(set2);   //add上面的set2 裡面的三個元素
        System.out.println(set);
       System.out.println(set.size());
 	}

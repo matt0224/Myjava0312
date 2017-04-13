@@ -1,6 +1,6 @@
 package tw.matt0312;
 /*
- * 這邊是從取資料
+ * 這邊是從取資料 序列化 所以這物件要先存在
  */
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
