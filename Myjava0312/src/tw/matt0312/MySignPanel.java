@@ -15,7 +15,8 @@ import javax.swing.JPanel;
 
 public class MySignPanel extends JPanel {                     //line
 	private LinkedList <LinkedList<HashMap<String, Integer>>> lines, recyle;  //原本一條線 包起來代表很多條線
-	                 //以上是資料結構                                                //作一個回收桶
+	         
+	//以上是資料結構                                                //作一個回收桶
 	//<LinkedList<HashMap<String, Integer>> lines;這樣叫做一條線
 	                        //k,v
     public MySignPanel(){
@@ -77,9 +78,9 @@ public class MySignPanel extends JPanel {                     //line
     		HashMap<String, Integer> point = new HashMap<>();
     		point.put("x", e.getX());
     		point.put("y",e.getY() );
-    		line.add(point);
+    		line.add(point); //這邊只是區域變數
     		
-    		lines.add(line);   //只含一個點的新線納入結構
+    		lines.add(line);   //只含一個點的新線納入大結構
     		
     	}
     	@Override
@@ -88,6 +89,7 @@ public class MySignPanel extends JPanel {                     //line
     		HashMap<String, Integer> point = new HashMap<>();
     		point.put("x", e.getX());
     		point.put("y",e.getY() );
+    		//line.add(point); 改成下面那行
     		lines.getLast().add(point); // 把線加進去
     		repaint();
     		//recyle.clear(); 這邊是有個點就clear
