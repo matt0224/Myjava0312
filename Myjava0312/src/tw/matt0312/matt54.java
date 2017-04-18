@@ -1,5 +1,7 @@
 package tw.matt0312;
-
+/*
+ * 這邊是把上面檔案寫道"./dir2/file1.txt"
+ */
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;

@@ -12,7 +12,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class DigitalSign extends JFrame {
-	private JButton clear, undo, redo, save, open,color;
+	private JButton clear, undo, redo, save, open,color,stroke,bgcolor;
 	private MySignPanel msp;
 	
 	public DigitalSign(){
@@ -20,7 +20,8 @@ public class DigitalSign extends JFrame {
 		setLayout(new BorderLayout());
 		
 		clear = new JButton("Clear"); undo = new JButton("Undo"); redo = new JButton("Redo");color = new JButton("color");
-		JPanel top = new JPanel(new FlowLayout()); top.add(clear);top.add(undo); top.add(redo);top.add(color);
+		stroke=new JButton("stroke");bgcolor=new JButton("bgcolor");
+		JPanel top = new JPanel(new FlowLayout()); top.add(clear);top.add(undo); top.add(redo);top.add(color);top.add(stroke);top.add(bgcolor);
 		add(top, BorderLayout.NORTH);
 		
 		msp = new  MySignPanel();

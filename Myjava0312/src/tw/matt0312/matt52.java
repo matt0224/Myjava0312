@@ -1,6 +1,6 @@
 package tw.matt0312;
 /*
- * 換列符號
+ * 換列符號    檔案是自己建的 也是讀進來
  */
 import java.io.BufferedReader;
 import java.io.File;

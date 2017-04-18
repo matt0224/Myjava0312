@@ -5,7 +5,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 /*
- * 檔案複製的邏輯
+ * 檔案複製的邏輯-不同的讀法
  */
 public class matt58 {
 

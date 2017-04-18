@@ -4,7 +4,9 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-
+/*
+ * 檔案複製的邏輯
+ */
 public class matt57 {
 
 	public static void main(String[] args) {

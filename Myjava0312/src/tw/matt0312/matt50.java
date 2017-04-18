@@ -9,7 +9,7 @@ public class matt50 {
 
 	public static void main(String[] args) {
 		File file =new File("./dir1/file1.txt ");  
-		             
+		                     //這邊是資策會那邊的資料夾
 		  try{
 			FileInputStream fin= new FileInputStream(file); //這邊用的是 FileInputStream第一招裡面放file
 			  byte[] buf=new byte[(int)file.length()] ;	 //陣列最多只能只能到整數範圍 這邊最多只能讀2g
