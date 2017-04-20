@@ -1,13 +1,13 @@
 package tw.matt0312;
 
 import javax.print.DocFlavor.STRING;
-
+//唯一可以表現出生命力的方法 彈性較大
 public class matt76 {
 
 	public static void main(String[] args) {
-//		Thread2 t2 =new Thread2();
-//		Thread tt =new Thread(t2); //把t2丟進去
-//		tt.start();
+//		Thread2 t2 =new Thread2(); //t2只有run方法 
+//		Thread tt =new Thread(t2); //把t2丟進去  Thread有一個方法丟Runnable進去
+//		tt.start();//現在的tt就可以表現出生命力
 		Thread2 t2 =new Thread2("A");
 		Thread tt2 =new Thread(t2);
 		Thread2 t3 =new Thread2("B");
